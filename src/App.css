@@ -587,7 +587,8 @@ main { flex: 1; }
   .site-header { height: 62px; }
   .header-inner { width: calc(100% - 32px); }
   .catalog-page.content-width { width: calc(100% - 32px); }
-  .catalog-page { padding-top: 28px; padding-bottom: 58px; }
+  .catalog-page, .appointments-page { padding-top: 20px; }
+  .catalog-page { padding-bottom: 58px; }
   .page-intro { padding-bottom: 19px; }
   .page-intro h1 { font-size: 32px; }
   .page-intro p { font-size: 14px; }
