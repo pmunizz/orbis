@@ -12,8 +12,14 @@ import NotFoundPage from './NotFoundPage'
 
 export function Logo() {
   return (
-    <Link className="brand" to="/" aria-label="Orbis — catálogo">
-      <span className="brand-mark"><CalendarDays size={20} strokeWidth={2.2} /></span>
+    <Link className="brand" to="/" aria-label="Orbis">
+      <span className="brand-mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="6.1" stroke="currentColor" strokeWidth="1.6" />
+          <ellipse cx="12" cy="12" rx="9" ry="3.6" stroke="currentColor" strokeWidth="1.3" transform="rotate(-35 12 12)" />
+          <circle cx="18.2" cy="6.8" r="1.6" fill="var(--accent)" stroke="var(--navy)" strokeWidth=".8" />
+        </svg>
+      </span>
       <span className="brand-name">orbis</span>
     </Link>
   )
