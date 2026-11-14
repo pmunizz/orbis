@@ -544,7 +544,8 @@ main { flex: 1; }
 .header-bag { color: var(--brand); }
 .header-bag span { color: var(--brand); background: var(--brand-soft); }
 .catalog-page.content-width { width: min(1120px, calc(100% - 56px)); }
-.catalog-page { padding-top: 38px; padding-bottom: 76px; }
+.catalog-page { padding-bottom: 76px; }
+.catalog-page, .appointments-page { padding-top: 16px; }
 .page-intro { padding-bottom: 26px; }
 .page-intro h1 { color: #28343a; font-size: 38px; letter-spacing: -1.4px; margin: 10px 0 8px; }
 .page-intro p { color: #69767c; font-size: 15px; }
@@ -587,7 +588,6 @@ main { flex: 1; }
   .site-header { height: 62px; }
   .header-inner { width: calc(100% - 32px); }
   .catalog-page.content-width { width: calc(100% - 32px); }
-  .catalog-page, .appointments-page { padding-top: 20px; }
   .catalog-page { padding-bottom: 58px; }
   .page-intro { padding-bottom: 19px; }
   .page-intro h1 { font-size: 32px; }
