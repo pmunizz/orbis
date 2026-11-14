@@ -259,7 +259,6 @@ main { flex: 1; }
 .slot-heading > span { display: flex; gap: 6px; align-items: center; color: #657269; font-size: 12px; }
 .slot-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
 .time-slot { border: 1px solid #dce5de; background: white; color: #405d48; border-radius: 8px; min-height: 48px; font: inherit; font-size: 14px; cursor: pointer; }
-.time-slot:hover:not(:disabled) { background: #f2f7f2; }
 .time-slot.selected { border-color: var(--navy); color: white; background: var(--navy); }
 .time-slot:disabled { border-color: #f0f2f0; color: #c1c8c3; background: #fafbfa; cursor: not-allowed; text-decoration: line-through; }
 .patient-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 13px; }

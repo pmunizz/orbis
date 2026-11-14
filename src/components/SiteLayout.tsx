@@ -20,7 +20,7 @@ export function Logo() {
           <circle cx="18.2" cy="6.8" r="1.6" fill="var(--accent)" stroke="var(--navy)" strokeWidth=".8" />
         </svg>
       </span>
-      <span className="brand-name">orbis</span>
+      <span className="brand-name">Orbis</span>
     </Link>
   )
 }
