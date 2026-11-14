@@ -86,7 +86,7 @@ export const services: Service[] = [
 export const combos: Combo[] = [
   { id: 'ritual', name: 'Ritual de renovação', description: 'Limpeza de pele + consulta de avaliação.', services: ['facial', 'consultation'], price: 350 },
   { id: 'pause', name: 'Pausa completa', description: 'Massagem relaxante + drenagem linfática.', services: ['massage', 'drainage'], price: 399 },
-  { id: 'selfcare', name: 'Essenciais de cuidado', description: 'Consulta de avaliação + design de sobrancelhas.', services: ['consultation', 'brows'], price: 245 },
+  { id: 'selfcare', name: 'Essenciais de cuidado', description: 'Consulta de retorno + design de sobrancelhas.', services: ['consultation-plus', 'brows'], price: 185 },
 ]
 
 export const professionals: Professional[] = [

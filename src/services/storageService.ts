@@ -1,8 +1,11 @@
-import { demoAppointments } from '../data/mockData'
+import { combos, demoAppointments } from '../data/mockData'
 import type { Appointment, Selection } from '../types'
 
 const APPOINTMENTS_KEY = 'orbis-appointments'
 const SELECTION_KEY = 'orbis-selection'
+const PREVIOUS_COMBO_SERVICES: Record<string, string[]> = {
+  selfcare: ['consultation', 'brows'],
+}
 
 export const readAppointments = (): Appointment[] => {
   try {
@@ -28,9 +31,19 @@ export const readSelection = (): Selection => {
     const saved = localStorage.getItem(SELECTION_KEY)
     if (saved) {
       const stored = JSON.parse(saved) as Partial<Selection>
+      const comboIds = stored.comboIds ?? []
+      const currentComboServices = new Set(
+        combos.filter((combo) => comboIds.includes(combo.id)).flatMap((combo) => combo.services),
+      )
+      const previousComboServices = new Set(
+        comboIds.flatMap((comboId) => PREVIOUS_COMBO_SERVICES[comboId] ?? []),
+      )
+      const serviceIds = (stored.serviceIds ?? []).filter((serviceId) =>
+        !previousComboServices.has(serviceId) || currentComboServices.has(serviceId),
+      )
       return {
-        serviceIds: stored.serviceIds ?? [],
-        comboIds: stored.comboIds ?? [],
+        serviceIds: [...new Set([...serviceIds, ...currentComboServices])],
+        comboIds,
       }
     }
   } catch (error) {
